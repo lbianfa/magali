@@ -1,5 +1,6 @@
-from backend.cliente import consultarCliente
+from backend.cliente import actualizarCliente
 
-cliente = consultarCliente("1101")
+# crearCliente("1111", "Maria", "3002012222", "El Santuario")
+# eliminarCliente("1101")
 
-print(cliente)
+actualizarCliente("1111", "Maria", "3002012266", "Medellín")
