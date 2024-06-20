@@ -1,0 +1,23 @@
+name: Validate README.md
+
+on:
+  push:
+    branches:
+      - "**"
+
+jobs:
+  validate-readme:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Check for README.md
+        run: |
+          if [ ! -f README.md ]; then
+            echo "README.md does not exist!"
+            exit 1
+          else
+            echo "README.md exists."
+          fi
